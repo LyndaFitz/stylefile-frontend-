@@ -1,0 +1,39 @@
+.fit-form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.fit-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.fit-form input,
+.fit-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.fit-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #FF1493; /* Hot Pink */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.fit-form button:hover {
+  background-color: #D41472; /* Darker Pink */
+}

@@ -1,0 +1,54 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ultra&family=Barlow+Semi+Condensed:wght@400;600;700&display=swap");
+
+/* Main Loading Container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: white;
+}
+
+/* Lottie Animation */
+.loading-animation {
+  width: 250px;
+  height: auto;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Loading Text */
+.loading-text {
+  font-family: "Ultra", serif;
+  font-size: 24px;
+  color: #FF1493;
+  margin-top: 20px;
+  animation: fadeIn 1.5s infinite alternate;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Fade In-Out Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,74 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Rammetto+One&family=Ultra&display=swap");
+
+/* Apply Ultra font for major headings */
+.ultra-text {
+  font-family: 'Ultra', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Apply Barlow Semi Condensed for paragraph text */
+.barlow-text {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button {
+  text-decoration: none;
+  font-family: 'Ultra', serif; /* Updated to Ultra */
+  font-size: 18px;
+  font-weight: 400;
+  padding: 12px 24px;
+  background-color: #FF1493;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: #d41472; /* Darker pink on hover */
+}
+
+/* SVG + Text Layout */
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px; /* Increased gap */
+  padding: 120px 100px; /* Adjusted padding */
+}
+
+/* Reverse layout for alternating SVG/text */
+.info-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Lottie Animations */
+.animation {
+  width: 300px;
+  height: auto;
+}
+
+/* Spacing between sections */
+.spacer {
+  height: 120px; /* Keeps spacing consistent */
+}
