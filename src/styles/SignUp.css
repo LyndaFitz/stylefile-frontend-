@@ -1,34 +1,74 @@
-.sign-up-page {
-  width: 100%;
-  max-width: 400px;
-  margin: 100px auto;
-  padding: 20px;
-  background: #ffffff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+@import url('https://fonts.googleapis.com/css2?family=Ultra&family=Barlow+Semi+Condensed:wght@400;600&display=swap');
+
+body {
+  background: #fff;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
 }
 
-.sign-up-page input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.title {
+  font-family: 'Ultra', serif;
+  font-size: 2.5rem;
+  color: #FF1493;
+  margin-bottom: 20px;
 }
 
-.sign-up-page button {
-  width: 100%;
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 15px;
+  padding: 20px;
+  border: 2px solid #FF1493;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(255, 20, 147, 0.3);
+  background: white;
+}
+
+.signup-form label {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.signup-form input {
   padding: 10px;
-  margin-top: 20px;
-  background-color: #28a745;
+  font-size: 1rem;
+  border: 2px solid #FF1493;
+  border-radius: 5px;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+
+.signup-button {
+  background: #FF1493;
   color: white;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-family: 'Ultra', serif;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-.sign-up-page p {
-  margin-top: 15px;
-  font-size: 14px;
+.signup-button:hover {
+  background: #D41472;
 }
+
+.signin-link {
+  margin-top: 15px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1rem;
+}
+
 

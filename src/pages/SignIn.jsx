@@ -1,43 +1,36 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth"; // Importing signIn method from Firebase
-import { auth } from "../FirebaseConfig"; // Import the auth object from the firebase config
+import { useNavigate } from "react-router-dom";
+import "../styles/SignIn.css";
 
 const SignIn = () => {
-  // State to hold email, password, and error messages
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page refresh
+  const navigate = useNavigate();
 
-    try {
-      // Use the Firebase signInWithEmailAndPassword method
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-      console.log(userCredential.user); // This logs the authenticated user
-      // You can redirect the user after login here if needed (using `useNavigate()` for example)
-    } catch (err) {
-      setError(err.message); // If error occurs, set error message
-      console.error("Error during sign-in:", err.message);
-    }
+    console.log("⚡ Attempting sign-in...");
+    console.log("✅ User signed in with:");
+    console.log("Username:", username);
+    console.log("Password:", password);
+
+    // Navigate to the user details page
+    navigate("/user-details");
   };
 
   return (
     <div className="signin-container">
-      <h2>Welcome Back!</h2>
+      <h2 className="title">Welcome Back!</h2>
       <form className="signin-form" onSubmit={handleSubmit}>
-        <label>Email</label>
+        <label>Username</label>
         <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          placeholder="Enter your username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           required
         />
         <label>Password</label>
@@ -48,11 +41,12 @@ const SignIn = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Sign In</button>
-        {error && <p className="error-message">{error}</p>}{" "}
-        {/* Display error message if any */}
+        <button type="submit" className="signin-button">
+          Sign In
+        </button>
+        {error && <p className="error-message">{error}</p>}
       </form>
-      <p>
+      <p className="signup-link">
         New to Style Files? <a href="/signup">Create an account</a>
       </p>
     </div>

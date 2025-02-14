@@ -1,119 +1,74 @@
-/* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Rammetto+One&family=Ultra&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ultra&family=Barlow+Semi+Condensed:wght@400;600&display=swap');
 
-/* Main container */
+body {
+  background: #fff;
+}
+
 .signin-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background-color: white; /* Keeping the white background */
-}
-
-/* Card styling */
-.signin-card {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(255, 20, 147, 0.2);
-  padding: 40px;
-  width: 400px;
   text-align: center;
-  border: 3px solid #FF1493;
-  animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Title */
-.signin-title {
+.title {
   font-family: 'Ultra', serif;
-  font-size: 36px;
+  font-size: 2.5rem;
   color: #FF1493;
-  margin-bottom: 10px;
-}
-
-/* Subtitle */
-.signin-subtitle {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 18px;
-  color: #666;
   margin-bottom: 20px;
 }
 
-/* Input Groups */
-.input-group {
+.signin-form {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  margin-bottom: 15px;
-}
-
-.input-group label {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.input-group input {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  padding: 12px;
+  width: 320px;
+  gap: 15px;
+  padding: 20px;
   border: 2px solid #FF1493;
   border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(255, 20, 147, 0.3);
+  background: white;
+}
+
+.signin-form label {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.signin-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #FF1493;
+  border-radius: 5px;
   outline: none;
-  transition: 0.3s ease-in-out;
+  display: block;
+  width: 100%;
 }
 
-.input-group input:focus {
-  border-color: #D41472;
-  box-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
-}
-
-/* Button */
-.signin-btn {
+.signin-button {
   background: #FF1493;
   color: white;
+  padding: 12px;
+  font-size: 1.2rem;
   font-family: 'Ultra', serif;
-  font-size: 18px;
-  font-weight: 400;
-  padding: 12px 0;
-  width: 100%;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
 
-.signin-btn:hover {
+.signin-button:hover {
   background: #D41472;
 }
 
-/* Footer */
-.signin-footer {
+.signup-link {
   margin-top: 15px;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 16px;
-  color: #333;
+  font-size: 1rem;
 }
 
-.signup-link {
-  color: #FF1493;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
-}
-
-.signup-link:hover {
-  text-decoration: underline;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
