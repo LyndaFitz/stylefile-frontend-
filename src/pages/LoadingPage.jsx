@@ -1,13 +1,29 @@
-import React from "react";
-import "../styles/LoadingPage.css";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
-import animation5 from "../assets/Animation5.json"; // Girl changing dresses
+import "../styles/LoadingPage.css"; // Ensure this file exists
+import animation5 from "../assets/Animation5.json"; // Correct JSON import
 
 const LoadingPage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Redirect to fit prediction page after 7 seconds
+    const timer = setTimeout(() => {
+      navigate("/fit-prediction");
+    }, 7000);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
     <div className="loading-container">
-      <Lottie animationData={animation5} className="loading-animation" />
-      <h2 className="loading-text">Styling Your Files... 💖</h2>
+      <Lottie
+        animationData={animation5}
+        loop={true}
+        className="loading-animation"
+      />
+      <h2 className="loading-text">Finding Your Perfect Fit...</h2>
     </div>
   );
 };
