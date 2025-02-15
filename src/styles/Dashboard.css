@@ -1,0 +1,25 @@
+.dashboard-container {
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #333;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+}
+
+.start-fit-btn {
+  background: #ff1493;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.start-fit-btn:hover {
+  background: #d41472;
+}

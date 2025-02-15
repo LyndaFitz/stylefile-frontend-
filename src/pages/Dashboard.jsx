@@ -1,10 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/Dashboard.css";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Welcome to Your Dashboard!</h1>
+    <div className="dashboard-container">
+      <h2>Welcome to Your Dashboard!</h2>
       <p>You are successfully logged in.</p>
+
+      <button
+        className="start-fit-btn"
+        onClick={() => navigate("/fit-prediction")}
+      >
+        Start Fit Prediction
+      </button>
     </div>
   );
 };

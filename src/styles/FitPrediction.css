@@ -1,42 +1,6 @@
-.fit-prediction-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 8px;
-  display: block;
-}
-
-input, select {
+.progress-bar {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #FF1493; /* Hot pink border */
+  height: 10px;
+  background-color: #ddd;
   border-radius: 5px;
 }
-
-.hotpink-input {
-  background-color: #FF1493;
-  color: white;
-  font-size: 16px;
-}
-
-button.submit-button {
-  padding: 10px 20px;
-  background-color: #FF1493;
-  color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button.submit-button:hover {
-  background-color: #D41472;
-}
-

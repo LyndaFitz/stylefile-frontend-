@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/FitPrediction.css";
+import "../styles/ClothingDimensions.css";
 
-const FitPrediction = () => {
+const ClothingDimensions = () => {
   const navigate = useNavigate();
   const [clothingData, setClothingData] = useState({
     waist: "",
@@ -19,12 +19,37 @@ const FitPrediction = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/loading"); // ✅ Goes to Loading Page
+    navigate("/fit-preferences");
   };
 
   return (
-    <div className="fit-prediction-container">
-      <h2>Enter Clothing Measurements</h2>
+    <div className="clothing-dimensions-container">
+      <div className="measurement-guide">
+        <h3>Measurement Guide</h3>
+        <ul>
+          <li>
+            <strong>Waist:</strong> Measure around the narrowest part of your
+            torso.
+          </li>
+          <li>
+            <strong>Hips:</strong> Measure around the widest part of your hips.
+          </li>
+          <li>
+            <strong>Length:</strong> Measure from the top to the bottom of the
+            garment.
+          </li>
+          <li>
+            <strong>Sleeve Length:</strong> Measure from shoulder to wrist.
+          </li>
+          <li>
+            <strong>Shoulder Width:</strong> Measure from shoulder to shoulder.
+          </li>
+          <li>
+            <strong>Inseam:</strong> (For pants) Measure from crotch to hem.
+          </li>
+        </ul>
+      </div>
+
       <form onSubmit={handleSubmit}>
         <label>Waist (in inches)</label>
         <input
@@ -79,12 +104,10 @@ const FitPrediction = () => {
           onChange={handleChange}
         />
 
-        <button type="submit" className="submit-btn">
-          Submit
-        </button>
+        <button type="submit">Next</button>
       </form>
     </div>
   );
 };
 
-export default FitPrediction;
+export default ClothingDimensions;

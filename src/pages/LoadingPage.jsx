@@ -1,29 +1,54 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
-import "../styles/LoadingPage.css"; // Ensure this file exists
-import animation5 from "../assets/Animation5.json"; // Correct JSON import
+import animationData from "../assets/Animation3.json"; // ✅ Correct Animation
+import "../styles/LoadingPage.css";
 
 const LoadingPage = () => {
   const navigate = useNavigate();
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Redirect to fit prediction page after 7 seconds
-    const timer = setTimeout(() => {
-      navigate("/fit-prediction");
-    }, 7000);
+    // Progress bar updates smoothly over 10 seconds
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + 1;
+      });
+    }, 100);
 
-    return () => clearTimeout(timer);
+    setTimeout(() => {
+      navigate("/results");
+    }, 10000);
+
+    return () => clearInterval(interval);
   }, [navigate]);
 
   return (
     <div className="loading-container">
+      <h2>Finding Your Best Fit...</h2>
+      <p className="loading-text">
+        Analyzing measurements and clothing dimensions...
+      </p>
+
+      <div className="progress-bar">
+        <div className="progress" style={{ width: `${progress}%` }}></div>
+      </div>
+
       <Lottie
-        animationData={animation5}
-        loop={true}
+        animationData={animationData}
         className="loading-animation"
+        loop
+        autoPlay
       />
-      <h2 className="loading-text">Finding Your Perfect Fit...</h2>
+
+      <p className="loading-note">
+        This may take a moment. Hang tight while we generate your fit
+        prediction!
+      </p>
     </div>
   );
 };
