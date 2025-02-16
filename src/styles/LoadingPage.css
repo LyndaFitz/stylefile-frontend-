@@ -46,3 +46,23 @@
   color: #333;
   max-width: 500px;
 }
+
+/* Adjusted Progress Bar */
+.progress-bar {
+  width: 50%; /* Adjusted shorter width */
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: #FF1493; /* Back to hot pink */
+  border-radius: 6px;
+  transition: width 0.3s ease-in-out;
+}
+

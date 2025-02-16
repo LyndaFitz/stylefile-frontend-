@@ -31,8 +31,10 @@ const Homepage = () => {
           <Lottie animationData={zipperAnimation} className="animation" />
         </div>
         <div className="text-container">
-          <h2 className="ultra-text">Your Digital Closet, Reimagined</h2>
-          <p className="barlow-text">
+          <h2 className="ultra-text glowing-text">
+            Your Digital Closet, Reimagined
+          </h2>
+          <p className="barlow-text glowing-text">
             Style Files lets you mix, match, and visualize your outfits like
             never before.
           </p>
@@ -44,8 +46,8 @@ const Homepage = () => {
       {/* Second Section - Text First, SVG Second */}
       <section className="info-section reverse">
         <div className="text-container">
-          <h2 className="ultra-text">Try Before You Buy</h2>
-          <p className="barlow-text">
+          <h2 className="ultra-text glowing-text">Try Before You Buy</h2>
+          <p className="barlow-text glowing-text">
             See how clothes fit your virtual model before making a purchase.
           </p>
         </div>
@@ -62,8 +64,8 @@ const Homepage = () => {
           <Lottie animationData={animation5} className="animation" />
         </div>
         <div className="text-container">
-          <h2 className="ultra-text">Every Style, Every Size</h2>
-          <p className="barlow-text">
+          <h2 className="ultra-text glowing-text">Every Style, Every Size</h2>
+          <p className="barlow-text glowing-text">
             Style Files adjusts clothing sizes so you can find the perfect fit.
           </p>
         </div>
@@ -74,8 +76,10 @@ const Homepage = () => {
       {/* Fourth Section - Text First, SVG Second */}
       <section className="info-section reverse">
         <div className="text-container">
-          <h2 className="ultra-text">Your Personal Fashion Assistant</h2>
-          <p className="barlow-text">
+          <h2 className="ultra-text glowing-text">
+            Your Personal Fashion Assistant
+          </h2>
+          <p className="barlow-text glowing-text">
             Save outfits, track your wardrobe, and experiment with new styles
             effortlessly.
           </p>
