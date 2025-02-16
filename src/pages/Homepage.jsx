@@ -4,9 +4,9 @@ import Lottie from "lottie-react";
 import "../styles/Home.css";
 
 // Import Lottie animations
-import animation1 from "../assets/Animation1.json"; // Heel Shoe
+import animation1 from "../assets/Animation1.json"; // Shoe Animation (Now Last)
 import animation2 from "../assets/Animation2.json"; // Locker Animation
-import animation5 from "../assets/Animation5.json"; // Dress Animation
+import animation5 from "../assets/Animation5.json"; // Dress Animation (Now Before Shoe)
 import zipperAnimation from "../assets/Animation4.json"; // Zipper Animation
 
 const Homepage = () => {
@@ -27,8 +27,10 @@ const Homepage = () => {
 
       {/* First Section - SVG First, Text Second */}
       <section className="info-section">
-        <Lottie animationData={zipperAnimation} className="animation" />
-        <div className="text-box">
+        <div className="svg-container">
+          <Lottie animationData={zipperAnimation} className="animation" />
+        </div>
+        <div className="text-container">
           <h2 className="ultra-text">Your Digital Closet, Reimagined</h2>
           <p className="barlow-text">
             Style Files lets you mix, match, and visualize your outfits like
@@ -41,24 +43,29 @@ const Homepage = () => {
 
       {/* Second Section - Text First, SVG Second */}
       <section className="info-section reverse">
-        <div className="text-box">
+        <div className="text-container">
           <h2 className="ultra-text">Try Before You Buy</h2>
           <p className="barlow-text">
             See how clothes fit your virtual model before making a purchase.
           </p>
         </div>
-        <Lottie animationData={animation2} className="animation" />
+        <div className="svg-container">
+          <Lottie animationData={animation2} className="animation" />
+        </div>
       </section>
 
       <div className="spacer"></div>
 
       {/* Third Section - SVG First, Text Second */}
       <section className="info-section">
-        <Lottie animationData={animation1} className="animation" />
-        <div className="text-box">
-          <h2 className="ultra-text">Every Style, Every Size</h2>
+        <div className="svg-container">
+          <Lottie animationData={animation5} className="animation" />
+        </div>
+        <div className="text-container">
+          <h2 className="ultra-text">Your Personal Fashion Assistant</h2>
           <p className="barlow-text">
-            Style Files adjusts clothing sizes so you can find the perfect fit.
+            Save outfits, track your wardrobe, and experiment with new styles
+            effortlessly.
           </p>
         </div>
       </section>
@@ -67,18 +74,18 @@ const Homepage = () => {
 
       {/* Fourth Section - Text First, SVG Second */}
       <section className="info-section reverse">
-        <div className="text-box">
-          <h2 className="ultra-text">Your Personal Fashion Assistant</h2>
+        <div className="text-container">
+          <h2 className="ultra-text">Every Style, Every Size</h2>
           <p className="barlow-text">
-            Save outfits, track your wardrobe, and experiment with new styles
-            effortlessly.
+            Style Files adjusts clothing sizes so you can find the perfect fit.
           </p>
         </div>
-        <Lottie animationData={animation5} className="animation" />
+        <div className="svg-container">
+          <Lottie animationData={animation1} className="animation" />
+        </div>
       </section>
     </div>
   );
 };
 
 export default Homepage;
-

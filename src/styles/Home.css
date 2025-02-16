@@ -33,7 +33,7 @@
 
 .nav-button {
   text-decoration: none;
-  font-family: 'Ultra', serif; /* Updated to Ultra */
+  font-family: 'Ultra', serif; 
   font-size: 18px;
   font-weight: 400;
   padding: 12px 24px;
@@ -45,7 +45,7 @@
 }
 
 .nav-button:hover {
-  background-color: #d41472; /* Darker pink on hover */
+  background-color: #d41472;
 }
 
 /* SVG + Text Layout */
@@ -53,13 +53,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px; /* Increased gap */
-  padding: 120px 100px; /* Adjusted padding */
+  gap: 50px; 
+  padding: 120px 100px; 
 }
 
-/* Reverse layout for alternating SVG/text */
-.info-section.reverse {
+/* Ensure sections alternate correctly */
+.info-section:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+/* Ensure even spacing */
+.info-section .svg-container,
+.info-section .text-container {
+  width: 50%;
+}
+
+/* Containers to keep layout clean */
+.svg-container {
+  display: flex;
+  justify-content: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Lottie Animations */
@@ -70,5 +88,6 @@
 
 /* Spacing between sections */
 .spacer {
-  height: 120px; /* Keeps spacing consistent */
+  height: 65px;
 }
+
