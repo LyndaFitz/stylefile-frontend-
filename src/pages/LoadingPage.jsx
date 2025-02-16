@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
-import animationData from "../assets/Animation3.json"; // ✅ Correct Animation
+import animation3 from "../assets/Animation3.json"; // Clock Animation
+import animation6 from "../assets/Animation6.json"; // Newton's Cradle Animation
 import "../styles/LoadingPage.css";
 
 const LoadingPage = () => {
@@ -9,7 +10,7 @@ const LoadingPage = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Progress bar updates smoothly over 10 seconds
+    // Progress bar updates smoothly over 20 seconds
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -18,29 +19,39 @@ const LoadingPage = () => {
         }
         return prev + 1;
       });
-    }, 100);
+    }, 200);
 
     setTimeout(() => {
       navigate("/results");
-    }, 10000);
+    }, 20000); // Now 20 seconds instead of 10
 
     return () => clearInterval(interval);
   }, [navigate]);
 
   return (
     <div className="loading-container">
+      {/* Clock Animation at the top */}
+      <Lottie
+        animationData={animation3}
+        className="clock-animation"
+        loop
+        autoPlay
+      />
+
       <h2>Finding Your Best Fit...</h2>
       <p className="loading-text">
         Analyzing measurements and clothing dimensions...
       </p>
 
+      {/* Progress Bar */}
       <div className="progress-bar">
         <div className="progress" style={{ width: `${progress}%` }}></div>
       </div>
 
+      {/* Newton's Cradle Animation at the bottom */}
       <Lottie
-        animationData={animationData}
-        className="loading-animation"
+        animationData={animation6}
+        className="cradle-animation"
         loop
         autoPlay
       />

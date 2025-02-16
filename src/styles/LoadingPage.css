@@ -1,49 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Ultra&family=Barlow+Semi+Condensed:wght@400;600&display=swap");
+
 .loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
-  font-family: "Barlow Semi Condensed", sans-serif;
-  color: #333;
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  background: white;
+  gap: 20px;
+  background-color: white;
 }
 
-h2 {
-  color: #ff1493;
-  font-size: 24px;
+/* Clock Animation at the top */
+.clock-animation {
+  width: 120px;
+  height: auto;
   margin-bottom: 10px;
 }
 
-.loading-text {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 15px;
-}
-
+/* Progress Bar */
 .progress-bar {
-  width: 100%;
+  width: 60%;
   height: 10px;
-  background-color: #ddd;
+  background: #ff1493;
   border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 15px;
 }
 
 .progress {
   height: 100%;
-  background: linear-gradient(to right, #ff1493, #d41472);
-  transition: width 0.1s ease-in-out;
+  background: white;
+  transition: width 0.2s ease-in-out;
 }
 
-.loading-animation {
-  width: 300px;
+/* Newton's Cradle Animation at the bottom */
+.cradle-animation {
+  width: 200px;
   height: auto;
-  margin: 20px auto;
+  margin-top: 15px;
 }
 
-.loading-note {
-  font-size: 14px;
-  color: #777;
-  margin-top: 15px;
+.loading-text, .loading-note {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 500px;
 }
