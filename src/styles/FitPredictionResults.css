@@ -1,79 +1,83 @@
-@import url("https://fonts.googleapis.com/css2?family=Ultra&family=Barlow+Semi+Condensed:wght@400;600&display=swap");
-
-/* 🔹 Full Page Background */
-.fit-results-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.results-container {
   text-align: center;
-  background: linear-gradient(135deg, rgba(255, 20, 147, 0.8), rgba(255, 105, 180, 0.7));
-  padding: 40px;
+  font-family: "Barlow Semi Condensed", sans-serif;
   color: #333;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.5);
 }
 
-/* 🔹 Title Styling */
 .results-title {
   font-family: "Ultra", serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #FF1493;
-  background: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(255, 20, 147, 0.3);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-/* 🔹 Confidence Section */
-.confidence-section {
-  background: white;
-  padding: 15px;
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 15px;
+  background: #eee;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(255, 20, 147, 0.3);
-  text-align: center;
-  margin-bottom: 20px;
+  overflow: hidden;
+  margin: 15px 0;
 }
 
-.confidence-text {
+.progress {
+  height: 100%;
+  background: #FF1493;
+  transition: width 1s ease-in-out;
+}
+
+.fit-score {
   font-size: 1.2rem;
   font-weight: bold;
   color: #FF1493;
 }
 
-/* 🔹 Hot Pink Stars */
-.stars {
-  font-size: 2rem;
-  color: #FF1493;
-  letter-spacing: 3px;
-}
-
-/* 🔹 Results Details */
-.results-details {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(255, 20, 147, 0.3);
-  font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 1.2rem;
-  max-width: 600px;
+/* Fit Breakdown */
+.fit-details {
   text-align: left;
+  margin-top: 10px;
 }
 
-/* 🔹 Return Button */
-.return-button {
-  background: #FF1493;
-  color: white;
-  border: none;
-  padding: 14px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-family: "Ultra", serif;
-  transition: background 0.3s ease-in-out;
+.fit-details p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Recommendation */
+.recommendation {
+  font-style: italic;
+  margin-top: 15px;
+  color: #444;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin-top: 20px;
 }
 
-.return-button:hover {
+.adjust-btn,
+.try-again-btn {
+  background: #FF1493;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.adjust-btn:hover,
+.try-again-btn:hover {
   background: #D41472;
 }
