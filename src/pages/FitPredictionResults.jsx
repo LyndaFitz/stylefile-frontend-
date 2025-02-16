@@ -3,7 +3,7 @@ import "../styles/FitPredictionResults.css";
 
 const getConfidenceStars = (score) => {
   const stars = Math.round(score / 20);
-  return "⭐".repeat(stars).padEnd(5, "⭐");
+  return "★".repeat(stars).padEnd(5, "★"); // Hot pink stars instead of emojis
 };
 
 const FitPredictionResults = () => {
@@ -11,7 +11,7 @@ const FitPredictionResults = () => {
 
   return (
     <div className="fit-results-container">
-      <h2>Fit Prediction Results</h2>
+      <h2 className="results-title">Fit Prediction Results</h2>
 
       <div className="confidence-section">
         <p className="confidence-text">Confidence Level:</p>
@@ -33,6 +33,8 @@ const FitPredictionResults = () => {
           for the best fit.
         </p>
       </div>
+
+      <button className="return-button">Try Another Item</button>
     </div>
   );
 };

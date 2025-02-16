@@ -1,61 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Ultra&family=Barlow+Semi+Condensed:wght@400;600&display=swap");
+
+/* 🔹 Full Page Background Fix */
 .clothing-dimensions-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-linear-gradient(
+    45deg,
+    #FF1493,
+    #FF1493 20px,
+    white 20px,
+    white 40px
+  );
   text-align: center;
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  color: #333;
-  max-width: 600px;
-  margin: auto;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: white;
 }
 
+/* 🔹 Layout Adjustment: Form & Measurement Guide */
+.clothing-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px; /* Closer together */
+  position: relative;
+}
+
+/* 🔹 Measurement Guide - Bigger & More Rectangular */
+.measurement-guide {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(255, 20, 147, 0.3);
+  max-width: 400px; /* Wider */
+  min-height: 380px; /* More rectangular */
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  top: 25px; /* Moves it lower so it starts at "Hips" */
+}
+
+/* 🔹 Measurement Guide Glow Effect on Hover */
+.measurement-guide:hover {
+  box-shadow: 0px 0px 20px #FF1493;
+}
+
+/* 🔹 Measurement Guide Titles & Text */
+.measurement-guide h3 {
+  font-family: "Ultra", serif;
+  font-size: 1.8rem;
+  color: #FF1493;
+}
+
+.measurement-guide ul {
+  list-style: none;
+  padding: 0;
+}
+
+.measurement-guide li {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+/* 🔹 Form Box - Bigger + Glow Effect */
+.input-container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(255, 20, 147, 0.2);
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 470px; /* Slightly bigger */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* 🔹 Form Box Glow on Hover */
+.input-container:hover {
+  box-shadow: 0px 0px 20px #FF1493;
+}
+
+/* 🔹 Form Styling */
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 400px;
-  margin: auto;
+  max-width: 470px; /* Bigger */
 }
 
+/* Labels */
 label {
-  font-weight: bold;
-  margin-top: 10px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
   display: block;
+  margin-bottom: 5px;
 }
 
+/* Input Fields */
 input {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 2px solid #ff1493;
+  padding: 12px;
+  border: 2px solid #FF1493;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-input:focus {
-  border-color: #d41472;
-  box-shadow: 0 0 10px #ff1493;
+  font-size: 1.1rem;
   outline: none;
 }
 
-.note {
-  font-size: 12px;
-  color: #777;
-}
-
+/* Submit Button */
 button {
-  background: #ff1493;
+  background: #FF1493;
   color: white;
   border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 14px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  font-size: 1.1rem;
   font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-  background: #d41472;
+  background: #D41472;
 }

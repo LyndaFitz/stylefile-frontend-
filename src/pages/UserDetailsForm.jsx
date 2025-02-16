@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/UserDetailsForm.css"; // Make sure you create this CSS file
+import "../styles/UserDetailsForm.css"; // Make sure this CSS file exists
 
 const UserDetailsForm = () => {
   const [height, setHeight] = useState("");
@@ -28,7 +28,7 @@ const UserDetailsForm = () => {
 
   return (
     <div className="form-container">
-      <h2>Tell Us About You!</h2>
+      <h2 className="form-title">Tell Us About You!</h2>
       <form onSubmit={handleSubmit}>
         <label>Height (inches)</label>
         <input

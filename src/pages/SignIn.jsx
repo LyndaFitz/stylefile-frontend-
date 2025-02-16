@@ -24,6 +24,7 @@ const SignIn = () => {
   return (
     <div className="signin-container">
       <h2 className="title">Welcome Back!</h2>
+
       <form className="signin-form" onSubmit={handleSubmit}>
         <label>Username</label>
         <input
@@ -33,6 +34,7 @@ const SignIn = () => {
           onChange={(e) => setUsername(e.target.value)}
           required
         />
+
         <label>Password</label>
         <input
           type="password"
@@ -41,11 +43,14 @@ const SignIn = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+
         <button type="submit" className="signin-button">
           Sign In
         </button>
+
         {error && <p className="error-message">{error}</p>}
       </form>
+
       <p className="signup-link">
         New to Style Files? <a href="/signup">Create an account</a>
       </p>

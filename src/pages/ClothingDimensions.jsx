@@ -24,6 +24,7 @@ const ClothingDimensions = () => {
 
   return (
     <div className="clothing-dimensions-container">
+      {/* Measurement Guide */}
       <div className="measurement-guide">
         <h3>Measurement Guide</h3>
         <ul>
@@ -50,59 +51,72 @@ const ClothingDimensions = () => {
         </ul>
       </div>
 
+      {/* Form for inputting clothing dimensions */}
       <form onSubmit={handleSubmit}>
-        <label>Waist (in inches)</label>
-        <input
-          type="number"
-          name="waist"
-          value={clothingData.waist}
-          onChange={handleChange}
-          required
-        />
+        <div className="input-container">
+          <label>Waist (in inches)</label>
+          <input
+            type="number"
+            name="waist"
+            value={clothingData.waist}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <label>Hips (in inches)</label>
-        <input
-          type="number"
-          name="hips"
-          value={clothingData.hips}
-          onChange={handleChange}
-          required
-        />
+        <div className="input-container">
+          <label>Hips (in inches)</label>
+          <input
+            type="number"
+            name="hips"
+            value={clothingData.hips}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <label>Length (in inches)</label>
-        <input
-          type="number"
-          name="length"
-          value={clothingData.length}
-          onChange={handleChange}
-          required
-        />
+        <div className="input-container">
+          <label>Length (in inches)</label>
+          <input
+            type="number"
+            name="length"
+            value={clothingData.length}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <label>Sleeve Length (in inches)</label>
-        <input
-          type="number"
-          name="sleeveLength"
-          value={clothingData.sleeveLength}
-          onChange={handleChange}
-        />
+        <div className="input-container">
+          <label>Sleeve Length (in inches)</label>
+          <input
+            type="number"
+            name="sleeveLength"
+            value={clothingData.sleeveLength}
+            onChange={handleChange}
+          />
+        </div>
 
-        <label>Shoulder Width (in inches)</label>
-        <input
-          type="number"
-          name="shoulderWidth"
-          value={clothingData.shoulderWidth}
-          onChange={handleChange}
-        />
+        <div className="input-container">
+          <label>Shoulder Width (in inches)</label>
+          <input
+            type="number"
+            name="shoulderWidth"
+            value={clothingData.shoulderWidth}
+            onChange={handleChange}
+          />
+        </div>
 
-        <label>
-          Inseam (in inches) <span className="note">(For pants only)</span>
-        </label>
-        <input
-          type="number"
-          name="inseam"
-          value={clothingData.inseam}
-          onChange={handleChange}
-        />
+        <div className="input-container">
+          <label>
+            Inseam (in inches) <span className="note">(For pants only)</span>
+          </label>
+          <input
+            type="number"
+            name="inseam"
+            value={clothingData.inseam}
+            onChange={handleChange}
+          />
+        </div>
 
         <button type="submit">Next</button>
       </form>
