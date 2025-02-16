@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import animation7 from "../assets/Animation7.json";
 import "../styles/SignIn.css";
 
 const SignIn = () => {
@@ -17,42 +19,50 @@ const SignIn = () => {
     console.log("Username:", username);
     console.log("Password:", password);
 
-    // Navigate to the user details page
-    navigate("/user-details");
+    navigate("/dashboard"); // Redirect to Dashboard after login
   };
 
   return (
     <div className="signin-container">
-      <h2 className="title">Welcome Back!</h2>
+      <div className="signin-header">
+        <h2 className="welcome-text">Welcome Back!</h2>
+        <div className="user-icon">
+          <Lottie animationData={animation7} className="animation-svg" />
+        </div>
+      </div>
 
-      <form className="signin-form" onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input
-          type="text"
-          placeholder="Enter your username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
+      <div className="form-wrapper">
+        <form className="signin-form" onSubmit={handleSubmit}>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
 
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="Enter your password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-        <button type="submit" className="signin-button">
-          Sign In
-        </button>
+          <button type="submit" className="signin-button">
+            Sign In
+          </button>
 
-        {error && <p className="error-message">{error}</p>}
-      </form>
+          {error && <p className="error-message">{error}</p>}
+        </form>
+      </div>
 
-      <p className="signup-link">
-        New to Style Files? <a href="/signup">Create an account</a>
+      <p className="signin-link">
+        New to Style Files? <Link to="/signup">Create an account</Link>
       </p>
     </div>
   );

@@ -12,7 +12,7 @@ const Dashboard = () => {
 
       <button
         className="start-fit-btn"
-        onClick={() => navigate("/fit-prediction")}
+        onClick={() => navigate("/user-details")} // ✅ Now redirects correctly
       >
         Start Fit Prediction
       </button>

@@ -5,9 +5,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import UserDetailsForm from "./pages/UserDetailsForm";
 import Dashboard from "./pages/Dashboard";
-import FitPrediction from "./pages/FitPrediction";
+import FitPreferences from "./pages/FitPreferences"; // ✅ Import it
 import ClothingDimensions from "./pages/ClothingDimensions";
-import FitPreferences from "./pages/FitPreferences";
 import LoadingPage from "./pages/LoadingPage";
 import FitPredictionResults from "./pages/FitPredictionResults";
 
@@ -20,9 +19,9 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/user-details" element={<UserDetailsForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/fit-prediction" element={<FitPrediction />} />
         <Route path="/clothing-dimensions" element={<ClothingDimensions />} />
-        <Route path="/fit-preferences" element={<FitPreferences />} />
+        <Route path="/fit-preferences" element={<FitPreferences />} />{" "}
+        {/* ✅ ADD THIS */}
         <Route path="/loading" element={<LoadingPage />} />
         <Route path="/results" element={<FitPredictionResults />} />
         <Route path="*" element={<h2>404 Page Not Found</h2>} />

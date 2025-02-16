@@ -23,7 +23,7 @@ const UserDetailsForm = () => {
       braSize,
     });
 
-    navigate("/dashboard"); // Redirect to the Dashboard after submitting details
+    navigate("/clothing-dimensions"); // ✅ Now it moves to the correct next step
   };
 
   return (
