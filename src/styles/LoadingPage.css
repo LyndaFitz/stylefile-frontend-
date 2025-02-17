@@ -11,45 +11,14 @@
   background-color: white;
 }
 
-/* Clock Animation at the top */
 .clock-animation {
   width: 120px;
   height: auto;
   margin-bottom: 10px;
 }
 
-/* Progress Bar */
 .progress-bar {
-  width: 60%;
-  height: 10px;
-  background: #ff1493;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background: white;
-  transition: width 0.2s ease-in-out;
-}
-
-/* Newton's Cradle Animation at the bottom */
-.cradle-animation {
-  width: 200px;
-  height: auto;
-  margin-top: 15px;
-}
-
-.loading-text, .loading-note {
-  font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 1.1rem;
-  color: #333;
-  max-width: 500px;
-}
-
-/* Adjusted Progress Bar */
-.progress-bar {
-  width: 50%; /* Adjusted shorter width */
+  width: 40%; /* Adjust this percentage for the desired bar length */
   height: 12px;
   background-color: #e0e0e0;
   border-radius: 6px;
@@ -60,9 +29,22 @@
 
 .progress {
   height: 100%;
-  width: 0%;
-  background-color: #FF1493; /* Back to hot pink */
+  width: 100%; /* Fills the container */
+  background-color: #FF1493;
   border-radius: 6px;
-  transition: width 0.3s ease-in-out;
+  /* transition: none;  <- Remove or comment out for a static bar */
 }
 
+.cradle-animation {
+  width: 200px;
+  height: auto;
+  margin-top: 15px;
+}
+
+.loading-text,
+.loading-note {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 500px;
+}

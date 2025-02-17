@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ultra&family=Barlow+Semi+Condensed:wght@400;600&display=swap");
 
-/* 🔹 Full Page Background Fix */
+/* 🔹 Full Page Background */
 .clothing-dimensions-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: repeating-linear-gradient(
     45deg,
     #FF1493,
@@ -15,29 +15,32 @@
     white 40px
   );
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
-/* 🔹 Layout Adjustment: Form & Measurement Guide */
+/* 🔹 Layout: Align Form & Guide Side by Side */
 .clothing-content {
   display: flex;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 25px; /* Closer together */
-  position: relative;
+  gap: 55px; /* Adds space between the two boxes */
+  width: 100%;
+  max-width: 1200px; /* Slightly increased for better spacing */
+  margin: 0 auto;
+  padding-left: 70px; /* Moves everything slightly right */
 }
 
-/* 🔹 Measurement Guide - Bigger & More Rectangular */
+/* 🔹 Measurement Guide */
 .measurement-guide {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 12px;
   box-shadow: 5px 5px 15px rgba(255, 20, 147, 0.3);
-  max-width: 400px; /* Wider */
-  min-height: 380px; /* More rectangular */
+  width: 320px; /* Keeps original size */
   text-align: left;
-  transition: all 0.3s ease-in-out;
   position: relative;
-  top: 25px; /* Moves it lower so it starts at "Hips" */
+  margin-top: 80px; /* Aligns it with the Hips box */
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 /* 🔹 Measurement Guide Glow Effect on Hover */
@@ -45,11 +48,12 @@
   box-shadow: 0px 0px 20px #FF1493;
 }
 
-/* 🔹 Measurement Guide Titles & Text */
+/* 🔹 Measurement Guide - Text Styling */
 .measurement-guide h3 {
   font-family: "Ultra", serif;
   font-size: 1.8rem;
   color: #FF1493;
+  margin-bottom: 10px;
 }
 
 .measurement-guide ul {
@@ -63,43 +67,35 @@
   margin: 8px 0;
 }
 
-/* 🔹 Form Box - Bigger + Glow Effect */
-.input-container {
+/* 🔹 Restore Original Form Width */
+form {
   background: white;
   padding: 25px;
-  border-radius: 15px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(255, 20, 147, 0.3);
+  width: 470px; /* Restored original width */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔹 Input Box Styling */
+.input-container {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(255, 20, 147, 0.2);
   margin-bottom: 15px;
   width: 100%;
-  max-width: 470px; /* Slightly bigger */
+  max-width: 470px; /* Keeps input boxes original size */
   transition: box-shadow 0.3s ease-in-out;
 }
 
-/* 🔹 Form Box Glow on Hover */
+/* 🔹 Input Box Glow on Hover */
 .input-container:hover {
   box-shadow: 0px 0px 20px #FF1493;
 }
 
-/* 🔹 Form Styling */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 470px; /* Bigger */
-}
-
-/* Labels */
-label {
-  font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: left;
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Input Fields */
+/* 🔹 Input Fields */
 input {
   width: 100%;
   padding: 12px;
@@ -109,7 +105,17 @@ input {
   outline: none;
 }
 
-/* Submit Button */
+/* 🔹 Labels */
+label {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 🔹 Submit Button */
 button {
   background: #FF1493;
   color: white;
